@@ -1,0 +1,27 @@
+---
+title: "Coursera Project - Map"
+author: "Alex"
+date: "5/2/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet.
+
+## Assignment 
+```{r}
+library("leaflet") 
+my_map <- leaflet() %>%
+  addTiles()
+
+my_map <- my_map %>% addMarkers(lat = 52.370216, lng = 4.895168)
+
+my_map
+```
+
